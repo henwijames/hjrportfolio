@@ -48,13 +48,17 @@ export default function Contact() {
                 GET IN TOUCH
               </h3>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
-                Whether you have an upcoming project, architectural inquiry, or opportunity, feel free to drop a message or reach out through direct channels.
+                Whether you have an upcoming project, architectural inquiry, or
+                opportunity, feel free to drop a message or reach out through
+                direct channels.
               </p>
             </div>
 
             <div className="space-y-3 font-mono text-xs">
               <div className="p-3 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 flex flex-col">
-                <span className="text-[10px] text-neutral-400 uppercase">// EMAIL DIRECT</span>
+                <span className="text-[10px] text-neutral-400 uppercase">
+                  // EMAIL DIRECT
+                </span>
                 <a
                   href="mailto:henryjames.ribano@example.com"
                   className="font-semibold text-neutral-900 dark:text-neutral-100 hover:underline mt-1"
@@ -64,14 +68,18 @@ export default function Contact() {
               </div>
 
               <div className="p-3 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 flex flex-col">
-                <span className="text-[10px] text-neutral-400 uppercase">// LOCATION</span>
+                <span className="text-[10px] text-neutral-400 uppercase">
+                  // LOCATION
+                </span>
                 <span className="font-semibold text-neutral-900 dark:text-neutral-100 mt-1">
                   Sharjah, United Arab Emirates / Philippines
                 </span>
               </div>
 
               <div className="p-3 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 flex flex-col">
-                <span className="text-[10px] text-neutral-400 uppercase">// SOCIAL & NETWORK</span>
+                <span className="text-[10px] text-neutral-400 uppercase">
+                  // SOCIAL & NETWORK
+                </span>
                 <div className="flex gap-4 mt-1 font-semibold">
                   <a
                     href="https://github.com"
@@ -92,11 +100,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between font-mono text-xs text-neutral-500">
-              <span>[ENCRYPTION]: STANDARD TLS</span>
-              <span className="text-emerald-500">// ONLINE</span>
-            </div>
           </div>
 
           {/* Right Column: Contact Form */}
@@ -110,12 +113,18 @@ export default function Contact() {
                   TRANSMISSION RECEIVED
                 </h4>
                 <p className="font-sans text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 max-w-md">
-                  Thank you for reaching out. Your message has been sent successfully. I will get back to you shortly.
+                  Thank you for reaching out. Your message has been sent
+                  successfully. I will get back to you shortly.
                 </p>
                 <button
                   onClick={() => {
                     setSubmitted(false);
-                    setFormData({ name: "", email: "", subject: "", message: "" });
+                    setFormData({
+                      name: "",
+                      email: "",
+                      subject: "",
+                      message: "",
+                    });
                   }}
                   className="mt-4 px-6 py-2.5 font-mono text-xs font-semibold bg-neutral-900 dark:bg-neutral-100 text-neutral-50 dark:text-neutral-900 hover:opacity-90 transition-opacity uppercase tracking-wider"
                 >
@@ -123,10 +132,16 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 font-mono text-xs">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-4 font-mono text-xs"
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label htmlFor="name" className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]">
+                    <label
+                      htmlFor="name"
+                      className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]"
+                    >
                       // YOUR NAME <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -142,7 +157,10 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label htmlFor="email" className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]">
+                    <label
+                      htmlFor="email"
+                      className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]"
+                    >
                       // EMAIL ADDRESS <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -159,7 +177,10 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="subject" className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]">
+                  <label
+                    htmlFor="subject"
+                    className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]"
+                  >
                     // SUBJECT
                   </label>
                   <input
@@ -174,7 +195,10 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="message" className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]">
+                  <label
+                    htmlFor="message"
+                    className="block text-neutral-600 dark:text-neutral-400 uppercase text-[10px]"
+                  >
                     // MESSAGE <span className="text-red-500">*</span>
                   </label>
                   <textarea
