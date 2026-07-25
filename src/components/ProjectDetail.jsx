@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
+import { Button } from "./ui/button";
 
 export default function ProjectDetail() {
   const { projectId } = useParams();
@@ -17,11 +18,12 @@ export default function ProjectDetail() {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
-  const projectImages = project?.images && project.images.length > 0
-    ? project.images
-    : project?.coverImage
-    ? [project.coverImage]
-    : [];
+  const projectImages =
+    project?.images && project.images.length > 0
+      ? project.images
+      : project?.coverImage
+        ? [project.coverImage]
+        : [];
 
   useEffect(() => {
     if (!api) return;
@@ -38,7 +40,9 @@ export default function ProjectDetail() {
     return (
       <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col items-center justify-center font-mono space-y-4">
         <h2 className="text-2xl font-bold text-red-400">[404_NOT_FOUND]</h2>
-        <p className="text-sm text-neutral-400">Project identifier does not exist.</p>
+        <p className="text-sm text-neutral-400">
+          Project identifier does not exist.
+        </p>
         <Link
           to="/"
           className="px-4 py-2 bg-neutral-100 text-neutral-900 font-bold hover:bg-neutral-200 transition-colors uppercase text-xs"
@@ -54,12 +58,14 @@ export default function ProjectDetail() {
       <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 min-h-screen flex flex-col">
         {/* TOP BACK BAR */}
         <div className="border-b border-neutral-200 dark:border-neutral-800 p-4 sm:p-6 flex items-center justify-between font-mono text-xs bg-neutral-100/40 dark:bg-neutral-900/40">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 hover:text-emerald-500 font-bold transition-colors uppercase tracking-wider"
-          >
-            <span>←</span> BACK TO MAIN PORTFOLIO
-          </Link>
+          <Button variant="link">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 font-bold transition-colors uppercase tracking-wider"
+            >
+              <span>← BACK TO MAIN PORTFOLIO</span>
+            </Link>
+          </Button>
           <span className="text-neutral-400 font-mono hidden sm:inline">
             [PROJECT_ID: {project.id.toUpperCase()}]
           </span>
@@ -74,7 +80,9 @@ export default function ProjectDetail() {
             <span className="text-neutral-400">•</span>
             <span className="text-neutral-500">{project.period}</span>
             <span className="text-neutral-400">•</span>
-            <span className="text-neutral-500">{project.company} ({project.location})</span>
+            <span className="text-neutral-500">
+              {project.company} ({project.location})
+            </span>
           </div>
 
           <h1 className="text-3xl sm:text-6xl font-extrabold font-mono tracking-tight text-neutral-900 dark:text-neutral-50 uppercase">
@@ -87,7 +95,10 @@ export default function ProjectDetail() {
 
           {/* PROJECT MULTI-IMAGE CAROUSEL */}
           <div className="space-y-3">
-            <Carousel setApi={setApi} className="w-full relative border border-neutral-200 dark:border-neutral-800 overflow-hidden bg-neutral-900">
+            <Carousel
+              setApi={setApi}
+              className="w-full relative border border-neutral-200 dark:border-neutral-800 overflow-hidden bg-neutral-900"
+            >
               <CarouselContent className="-ml-0">
                 {projectImages.map((imgUrl, idx) => (
                   <CarouselItem key={idx} className="pl-0">
@@ -172,7 +183,9 @@ export default function ProjectDetail() {
           {/* Sidebar Tech Specs */}
           <div className="lg:col-span-4 p-6 sm:p-8 space-y-6 font-mono text-xs bg-neutral-100/30 dark:bg-neutral-900/30">
             <div className="border-b border-neutral-200 dark:border-neutral-800 pb-4">
-              <span className="text-neutral-400 uppercase block mb-2">TECHNOLOGY STACK</span>
+              <span className="text-neutral-400 uppercase block mb-2">
+                TECHNOLOGY STACK
+              </span>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
@@ -186,14 +199,18 @@ export default function ProjectDetail() {
             </div>
 
             <div className="border-b border-neutral-200 dark:border-neutral-800 pb-4">
-              <span className="text-neutral-400 uppercase block mb-1">COMPANY / CLIENT</span>
+              <span className="text-neutral-400 uppercase block mb-1">
+                COMPANY / CLIENT
+              </span>
               <span className="font-bold text-sm text-neutral-900 dark:text-neutral-100">
                 {project.company}
               </span>
             </div>
 
             <div className="border-b border-neutral-200 dark:border-neutral-800 pb-4">
-              <span className="text-neutral-400 uppercase block mb-1">DEVELOPMENT PERIOD</span>
+              <span className="text-neutral-400 uppercase block mb-1">
+                DEVELOPMENT PERIOD
+              </span>
               <span className="font-bold text-sm text-neutral-900 dark:text-neutral-100">
                 {project.period}
               </span>
