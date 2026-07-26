@@ -38,12 +38,24 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap justify-center sm:justify-start items-center gap-4">
               <a
                 href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="px-6 py-3 font-mono text-sm bg-neutral-900 text-neutral-50 dark:bg-neutral-100 dark:text-neutral-900 font-medium hover:opacity-90 transition-opacity"
               >
                 View Works ↓
               </a>
               <a
                 href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="px-6 py-3 font-mono text-sm border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
               >
                 Get in Touch

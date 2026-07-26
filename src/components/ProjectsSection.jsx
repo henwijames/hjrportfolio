@@ -28,7 +28,7 @@ export default function ProjectsSection() {
 
   return (
     <AnimatedScrollSection
-      id="works"
+      id="projects"
       sectionNumber="02"
       title="FEATURED WORKS"
       sectionHeight="h-[450vh]"
