@@ -2,7 +2,10 @@ import meImg from "@/assets/me.jpeg";
 
 export default function Hero() {
   return (
-    <section className="w-full border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 font-sans transition-colors">
+    <section
+      id="hero"
+      className="w-full border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 font-sans transition-colors"
+    >
       <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 min-h-screen">
         <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr] items-stretch min-h-screen">
           <div className="relative shrink-0 w-full sm:w-64 md:w-120 min-h-[280px] border-b sm:border-b-0 sm:border-r border-neutral-200 dark:border-neutral-800 bg-neutral-200/50 dark:bg-neutral-800/50 flex flex-col items-center justify-center text-center p-4 group self-stretch">
