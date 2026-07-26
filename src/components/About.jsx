@@ -4,7 +4,7 @@ import AnimatedScrollSection from "./AnimatedScrollSection";
 // MOCK DATA OBJECTS
 const PERSONAL_INFO = {
   fullName: "Henry James Ribano",
-  role: "Full-Stack Software Developer & Systems Engineer",
+  role: "Junior Full-Stack Developer & IT Support",
   location: "Remote / Available Worldwide",
   primaryFocus:
     "High-performance web architecture, type-safe API integration, responsive user interfaces, and database optimization.",
