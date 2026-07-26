@@ -6,6 +6,8 @@ import ProjectsSection from "./components/ProjectsSection";
 import ProjectDetail from "./components/ProjectDetail";
 import Contact from "./components/Contact";
 
+import { Analytics } from "@vercel/analytics/react";
+
 function MainPortfolio() {
   return (
     <>
@@ -23,6 +25,7 @@ function MainPortfolio() {
 export default function App() {
   return (
     <BrowserRouter>
+      <Analytics />
       <div className="min-h-screen  bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 font-sans border-t border-neutral-200 dark:border-neutral-800">
         <Routes>
           <Route path="/" element={<MainPortfolio />} />
