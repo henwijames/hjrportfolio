@@ -26,6 +26,10 @@ export default function ProjectDetail() {
         : [];
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [projectId]);
+
+  useEffect(() => {
     if (!api) return;
 
     setCount(api.scrollSnapList().length);
