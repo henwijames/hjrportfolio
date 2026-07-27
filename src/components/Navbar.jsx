@@ -38,7 +38,7 @@ export default function Navbar() {
       }`}
     >
       {/* Centered Container with Outer Left/Right Borders */}
-      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 flex items-center justify-between h-16 px-4 sm:px-6 pr-0 sm:pr-0">
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 flex items-center justify-between h-16 px-4 sm:px-6 pr-4 md:pr-0">
         {/* Logo / Brand Indicator */}
         <a
           href="#hero"
