@@ -28,7 +28,8 @@ export default function Navbar() {
   const navLinks = [
     { label: "01. // ABOUT", href: "#about" },
     { label: "02. // WORKS", href: "#projects" },
-    { label: "03. // CONTACT", href: "#contact" },
+    { label: "03. // ACTIVITY", href: "#activity" },
+    { label: "04. // CONTACT", href: "#contact" },
   ];
 
   return (

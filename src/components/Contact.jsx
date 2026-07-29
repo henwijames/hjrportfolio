@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <AnimatedScrollSection
       id="contact"
-      sectionNumber="03"
+      sectionNumber="04"
       title="CONTACT ME"
     >
       <div className="w-full bg-neutral-100/90 dark:bg-neutral-900/90 border border-neutral-200 dark:border-neutral-800 p-4 sm:p-8 backdrop-blur-md">
